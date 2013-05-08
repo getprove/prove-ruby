@@ -14,13 +14,13 @@ gem 'prove'
 And then execute:
 
 ```bash
-  bundle
+bundle
 ```
 
 Or install it yourself:
 
 ```bash
-  gem install prove
+gem install prove
 ```
 
 And require:
