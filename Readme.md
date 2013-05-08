@@ -56,7 +56,7 @@ require 'prove'
   v.verified # true
 
   #create a verification object from scratch
-  v = Prove::Verification.new(id: "awoeif128912938, 
+  v = Prove::Verification.new(id: "awoeif128912938", 
                               tel:"1234567890", 
                               text: true, 
                               call: false, 
