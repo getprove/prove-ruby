@@ -13,11 +13,15 @@ gem 'prove'
 
 And then execute:
 
-  $ bundle
+```bash
+  bundle
+```
 
 Or install it yourself:
 
-  $ gem install prove
+```bash
+  gem install prove
+```
 
 And require:
 
@@ -52,7 +56,11 @@ require 'prove'
   v.verified # true
 
   #create a verification object from scratch
-  v = Prove::Verification.new(id: "awoeif128912938, tel:"1234567890", text: true, call: false, verified: true)
+  v = Prove::Verification.new(id: "awoeif128912938, 
+                              tel:"1234567890", 
+                              text: true, 
+                              call: false, 
+                              verified: true)
 ```
 
 ### Configuration 
@@ -60,13 +68,17 @@ Default config
 ```ruby
   Prove.api_key="test_APIKEY123"
 ```
+
 Config with options
 ```ruby
   
-  Prove.configure(api_key: "test_APIKEY123", logger: Rails.logger, log_level: :debug, faraday_adapter: :em_http)
+  Prove.configure(api_key: "test_APIKEY123", 
+                  logger: Rails.logger, 
+                  log_level: :debug, 
+                  faraday_adapter: :em_http)
 ```
 
-Advanced config with direct access to faraday connection. (Not recommedended See: [faraday middleware](https://github.com/lostisland/faraday#advanced-middleware-usage))
+Advanced config with direct access to faraday connection. ( **Advanced Users Only** See: [faraday middleware](https://github.com/lostisland/faraday#advanced-middleware-usage))
 
 ```ruby
   Prove.configure(api_key: "test_APIKEY123") do |cxn|
@@ -87,7 +99,7 @@ Support for either positional params
   Prove::Verification.verify(v.id, 1337)
 ```
 
-or named params (**recommended**)
+or named params ( **recommended** )
 
 ```ruby
   Prove::Verification.verify(id: v.id, pin: 1337)
